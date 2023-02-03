@@ -1,0 +1,16 @@
+{
+  "name": "onimaiui",
+  "version": "1.0.0",
+  "description": "Onimal UI",
+  "main": "src/index.js",
+  "repository": "https://github.com/Ling-yunchi/onimaiui",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1",
+    "prettier": "^2.8.3"
+  }
+}
