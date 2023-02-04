@@ -11,7 +11,7 @@
 }
 
 .content {
-  @apply relative rounded-md px-8 py-6 max-w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white;
+  @apply relative rounded-md px-8 py-6 w-96 max-w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white;
 }
 
 .actions {
