@@ -1535,6 +1535,11 @@ jest-leak-detector@^29.4.1:
     jest-get-type "^29.2.0"
     pretty-format "^29.4.1"
 
+jest-matcher-css@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmmirror.com/jest-matcher-css/-/jest-matcher-css-1.1.0.tgz#d2061f4b6bda3b6c2800d4e6cc5c96dad7dc4abd"
+  integrity sha512-HycxxNw36Cx/CD/XjIt4qcJ0SDpEH9F2ZWTndoyfK7nLiZnIJp/sGSdpQC4GoaC/XshKEee7nBJ81FhIScc5vA==
+
 jest-matcher-utils@^29.4.1:
   version "29.4.1"
   resolved "https://registry.npmmirror.com/jest-matcher-utils/-/jest-matcher-utils-29.4.1.tgz#73d834e305909c3b43285fbc76f78bf0ad7e1954"
