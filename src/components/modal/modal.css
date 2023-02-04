@@ -1,0 +1,19 @@
+.modal {
+  @apply fixed top-0 left-0 w-screen h-screen flex items-center justify-center invisible opacity-0 transition backdrop-blur;
+}
+
+.toggle:checked + .modal {
+  @apply opacity-100 visible;
+}
+
+.background {
+  @apply absolute top-0 left-0 w-full h-full bg-[#00000066];
+}
+
+.content {
+  @apply relative rounded-md px-8 py-6 max-w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white;
+}
+
+.actions {
+  @apply flex flex-wrap justify-end gap-4 mt-4 overflow-visible;
+}
