@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link } from "@builder.io/qwik-city";
 
+import { Modal } from "@onimai/qwik";
+
 export default component$(() => {
   return (
     <div class="p-4 flex gap-4">
@@ -14,6 +16,22 @@ export default component$(() => {
       <Link class="btn" href="/docs/get-start">
         Get Start
       </Link>
+
+      <label for="hello" class="btn">
+        Hello
+      </label>
+
+      <Modal id="hello">
+        <h2 class="text-2xl font-bold">Settings</h2>
+        <p class="opacity-60">Are you sure to remove all your settings?</p>
+
+        <button class="btn btn-danger" q:slot="action">
+          Yes
+        </button>
+        <label class="btn" for="hello" q:slot="action">
+          No
+        </label>
+      </Modal>
     </div>
   );
 });
