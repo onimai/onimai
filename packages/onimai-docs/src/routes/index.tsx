@@ -1,8 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, Link } from "@builder.io/qwik-city";
 
-import { Modal } from "@onimai/qwik";
-
 export default component$(() => {
   return (
     <div class="p-4 flex gap-4">
