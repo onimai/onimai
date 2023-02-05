@@ -7,7 +7,8 @@
     "build": "yarn build:postcss && yarn build:prejss",
     "build:postcss": "postcss src/*.css --dir dist",
     "build:prejss": "node build.js",
-    "dev": "watch \"yarn build\" src"
+    "dev": "watch \"yarn build\" src",
+    "fmt": "prettier --write ."
   },
   "dependencies": {
     "postcss-js": "^4.0.0",
@@ -19,6 +20,7 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
+    "prettier": "^2.8.3",
     "watch": "^1.0.2"
   }
 }

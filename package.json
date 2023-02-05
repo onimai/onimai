@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn workspace onimai run build && yarn workspace @onimai/qwik run build && yarn workspace onimai-docs run build"
+    "build": "yarn workspace onimai run build && yarn workspace @onimai/qwik run build && yarn workspace onimai-docs run build",
+    "fmt": "yarn workspace onimai run fmt && yarn workspace @onimai/qwik run fmt && yarn workspace onimai-docs run fmt"
   }
 }
