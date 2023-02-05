@@ -6,7 +6,8 @@
   "scripts": {
     "build": "yarn build:postcss && yarn build:prejss",
     "build:postcss": "postcss src/*.css --dir dist",
-    "build:prejss": "node build.js"
+    "build:prejss": "node build.js",
+    "dev": "watch \"yarn build\" src"
   },
   "dependencies": {
     "postcss-js": "^4.0.0",
@@ -17,6 +18,7 @@
     "glob": "^8.1.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0"
+    "postcss-import": "^15.1.0",
+    "watch": "^1.0.2"
   }
 }

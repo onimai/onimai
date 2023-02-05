@@ -3,5 +3,8 @@
   "name": "onimai",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "build": "yarn workspace onimai run build && yarn workspace onimai-docs run build"
+  }
 }
