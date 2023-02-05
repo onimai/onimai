@@ -1,32 +1,41 @@
 {
-  "name": "onimai-docs",
+  "name": "@onimai/qwik",
   "version": "0.0.1",
+  "description": "Create a reusable Qwik component library",
+  "main": "./lib/index.qwik.mjs",
+  "qwik": "./lib/index.qwik.mjs",
+  "types": "./lib-types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.qwik.mjs",
+      "require": "./lib/index.qwik.cjs",
+      "types": "./lib-types/index.d.ts"
+    }
+  },
+  "files": [
+    "lib",
+    "lib-types"
+  ],
   "engines": {
     "node": ">=15.0.0"
   },
-  "private": true,
+  "private": false,
+  "type": "module",
   "scripts": {
-    "build": "qwik build",
-    "build.client": "vite build",
-    "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.types": "tsc --incremental --noEmit",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adaptor'",
+    "build": "yarn build.lib && yarn build.types",
+    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
-    "preview": "qwik build preview && vite preview --open",
+    "release": "np",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
-  "dependencies": {
-    "onimai": "^0.0.1",
-    "@onimai/qwik": "^0.0.1"
-  },
   "devDependencies": {
     "@builder.io/qwik": "0.17.4",
-    "@builder.io/qwik-city": "0.0.128",
     "@types/eslint": "8.21.0",
     "@types/node": "^18.11.18",
     "@types/node-fetch": "latest",
@@ -34,14 +43,15 @@
     "@typescript-eslint/parser": "5.50.0",
     "autoprefixer": "10.4.11",
     "eslint": "8.33.0",
-    "eslint-plugin-qwik": "0.17.4",
+    "eslint-plugin-qwik": "latest",
     "node-fetch": "3.3.0",
+    "np": "7.6.1",
+    "onimai": "^0.0.1",
     "postcss": "^8.4.16",
     "prettier": "2.8.3",
     "tailwindcss": "^3.1.8",
     "typescript": "4.9.5",
     "undici": "5.16.0",
-    "vite": "4.0.4",
-    "vite-tsconfig-paths": "3.5.0"
+    "vite": "4.0.4"
   }
 }
