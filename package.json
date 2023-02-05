@@ -1,27 +1,7 @@
 {
-  "name": "onimaiui",
-  "version": "1.0.0",
-  "description": "Onimal UI",
-  "main": "src/index.js",
-  "repository": "https://github.com/Ling-yunchi/onimaiui",
-  "license": "MIT",
-  "scripts": {
-    "mitosis": "mitosis build",
-    "build": "yarn run mitosis",
-    "start": "watch \"yarn run mitosis\" ./src"
-  },
-  "dependencies": {
-    "@builder.io/mitosis": "^0.0.89",
-    "@builder.io/mitosis-cli": "^0.0.48",
-    "tailwindcss": "^3.2.4"
-  },
-  "devDependencies": {
-    "@builder.io/eslint-plugin-mitosis": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
-    "prettier": "^2.5.0",
-    "typescript": "^4.8.4",
-    "watch": "^1.0.2"
-  }
+  "private": true,
+  "name": "onimai",
+  "workspaces": [
+    "packages/*"
+  ]
 }
