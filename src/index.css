@@ -1,0 +1,7 @@
+.btn {
+  @apply hover:bg-yellow-500 bg-red-500;
+
+  &-sm {
+    @apply text-blue-500;
+  }
+}
