@@ -10,10 +10,8 @@
 
 ## Features
 
-- A plugin for Tailwind CSS
 - Faster development
-- Cleaner HTML
-- Pure CSS. Works on all frameworks
+- Compile to almost all frameworks
 - **Cute** and **Simple** components
 
 <div align="center">
