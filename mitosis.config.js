@@ -1,4 +1,4 @@
 module.exports = {
-  files: "src/**",
+  files: "src/components/**",
   targets: ["qwik"],
 };
