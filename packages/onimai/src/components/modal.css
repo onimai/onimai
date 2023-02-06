@@ -1,9 +1,14 @@
 .modal {
-  @apply fixed top-0 left-0 w-screen h-screen flex items-center justify-center invisible opacity-0 transition backdrop-blur;
+  @apply fixed top-0 left-0 w-screen h-screen flex items-center justify-center backdrop-blur;
+
+  /* animations */
+  @apply invisible opacity-0;
+  transition: opacity 300ms ease-in-out, visibility 300ms step-end;
 }
 
 .modal-toggle:checked + .modal {
   @apply opacity-100 visible;
+  transition-timing-function: ease-in-out, step-start;
 }
 
 .modal-background {
@@ -11,7 +16,7 @@
 }
 
 .modal-content {
-  @apply relative rounded-md px-8 py-6 w-96 max-w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white scale-50 transition;
+  @apply relative rounded-md px-8 py-6 w-96 max-w-full bg-white text-slate-900 dark:bg-slate-900 dark:text-white scale-50 transition duration-300;
 }
 
 .modal-close {

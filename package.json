@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "build": "yarn workspace onimai run build && yarn workspace @onimai/qwik run build && yarn workspace onimai-docs run build",
-    "fmt": "yarn workspace onimai run fmt && yarn workspace @onimai/qwik run fmt && yarn workspace onimai-docs run fmt"
+    "fmt": "yarn workspace onimai run fmt && yarn workspace @onimai/qwik run fmt && yarn workspace onimai-docs run fmt",
+    "lint": "yarn workspace @onimai/qwik run lint && yarn workspace onimai-docs run lint"
   }
 }

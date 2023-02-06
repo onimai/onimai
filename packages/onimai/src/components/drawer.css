@@ -1,0 +1,33 @@
+.drawer {
+  @apply fixed top-0 left-0 w-screen h-screen backdrop-blur;
+
+  /* animations */
+  @apply invisible opacity-0;
+  transition: opacity 300ms ease-in-out, visibility 300ms step-end;
+}
+
+.drawer-toggle:checked + .drawer {
+  @apply visible opacity-100;
+  transition-timing-function: ease-in-out, step-start;
+}
+
+.drawer-background {
+  @apply absolute top-0 left-0 w-full h-full bg-[#00000066];
+}
+
+.drawer-content {
+  @apply absolute top-0 h-full bg-white dark:bg-slate-900 transition-transform duration-300;
+}
+
+.drawer > .drawer-content,
+.drawer-right > .drawer-content {
+  @apply right-0 translate-x-full;
+}
+
+.drawer-left > .drawer-content {
+  @apply left-0 -translate-x-full;
+}
+
+.drawer-toggle:checked + .drawer > .drawer-content {
+  @apply translate-x-0;
+}
