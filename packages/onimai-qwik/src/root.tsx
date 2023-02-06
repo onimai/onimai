@@ -16,35 +16,43 @@ export default component$(() => {
         <title>Qwik Blank App</title>
       </head>
       <body class="p-8">
-        <label for="hello" class="btn" tabIndex={0}>
-          Modal
-        </label>
+        <details>
+          <summary>Modals</summary>
 
-        <Modal id="hello">
-          <h2 class="text-2xl font-bold">Hello world</h2>
-          <p class="opacity-60">Include stdio.h</p>
-
-          <label
-            class="btn btn-subtle"
-            for="hello"
-            tabIndex={0}
-            q:slot="action"
-          >
-            No
+          <label for="hello" class="btn" tabIndex={0}>
+            Modal
           </label>
-          <button class="btn" q:slot="action">
-            Yes
-          </button>
-        </Modal>
 
-        <label for="world" class="btn" tabIndex={0}>
-          Drawer
-        </label>
+          <Modal id="hello">
+            <h2 class="text-2xl font-bold">Hello world</h2>
+            <p class="opacity-60">Include stdio.h</p>
 
-        <Drawer id="world" class="p-4 w-96">
-          <h2 class="text-2xl font-bold">Hello world</h2>
-          <p class="opacity-60">Include stdio.h</p>
-        </Drawer>
+            <label
+              class="btn btn-subtle"
+              for="hello"
+              tabIndex={0}
+              q:slot="action"
+            >
+              No
+            </label>
+            <button class="btn" q:slot="action">
+              Yes
+            </button>
+          </Modal>
+        </details>
+
+        <details>
+          <summary>Drawers</summary>
+
+          <label for="world" class="btn" tabIndex={0}>
+            Drawer
+          </label>
+
+          <Drawer id="world" class="p-4 w-96">
+            <h2 class="text-2xl font-bold">Hello world</h2>
+            <p class="opacity-60">Include stdio.h</p>
+          </Drawer>
+        </details>
 
         <details>
           <summary>Inputs</summary>
@@ -74,54 +82,54 @@ export default component$(() => {
         <details>
           <summary>Popovers</summary>
           <div class="flex gap-4 flex-wrap">
-            <Popover direction="right" class="w-32 p-4">
+            <Popover direction="right" class="w-64 p-4">
               <Button q:slot="trigger">Right</Button>
               This is right popover
             </Popover>
-            <Popover direction="right-top" class="w-32 p-4">
+            <Popover direction="right-top" class="w-64 p-4">
               <Button q:slot="trigger">Right Top</Button>
               This is right top popover
             </Popover>
-            <Popover direction="right-bottom" class="w-32 p-4">
+            <Popover direction="right-bottom" class="w-64 p-4">
               <Button q:slot="trigger">Right Bottom</Button>
               This is right bottom popover
             </Popover>
 
-            <Popover direction="left" class="w-32 p-4">
+            <Popover direction="left" class="w-64 p-4">
               <Button q:slot="trigger">Left</Button>
               This is left popover
             </Popover>
-            <Popover direction="left-top" class="w-32 p-4">
+            <Popover direction="left-top" class="w-64 p-4">
               <Button q:slot="trigger">Left Top</Button>
               This is left top popover
             </Popover>
-            <Popover direction="left-bottom" class="w-32 p-4">
+            <Popover direction="left-bottom" class="w-64 p-4">
               <Button q:slot="trigger">Left Bottom</Button>
               This is left bottom popover
             </Popover>
 
-            <Popover direction="top" class="w-32 p-4">
+            <Popover direction="top" class="w-64 p-4">
               <Button q:slot="trigger">Top</Button>
               This is top popover
             </Popover>
-            <Popover direction="top-left" class="w-32 p-4">
+            <Popover direction="top-left" class="w-64 p-4">
               <Button q:slot="trigger">Top Left</Button>
               This is top left popover
             </Popover>
-            <Popover direction="top-right" class="w-32 p-4">
+            <Popover direction="top-right" class="w-64 p-4">
               <Button q:slot="trigger">Top Right</Button>
               This is top right popover
             </Popover>
 
-            <Popover direction="bottom" class="w-32 p-4">
+            <Popover direction="bottom" class="w-64 p-4">
               <Button q:slot="trigger">Bottom</Button>
               This is bottom popover
             </Popover>
-            <Popover direction="bottom-left" class="w-32 p-4">
+            <Popover direction="bottom-left" class="w-64 p-4">
               <Button q:slot="trigger">Bottom Left</Button>
               This is bottom left popover
             </Popover>
-            <Popover direction="bottom-right" class="w-32 p-4">
+            <Popover direction="bottom-right" class="w-64 p-4">
               <Button q:slot="trigger">Bottom Right</Button>
               This is bottom right popover
             </Popover>
@@ -144,6 +152,14 @@ export default component$(() => {
               Anything hover can trigger
             </Popover>
           </div>
+        </details>
+
+        <details>
+          <summary>Checkbox</summary>
+          <label class="flex items-center gap-4">
+            <input type="checkbox" class="checkbox" />
+            <span>Yes you are right</span>
+          </label>
         </details>
       </body>
     </>

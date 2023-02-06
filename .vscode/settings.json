@@ -3,6 +3,6 @@
   "tailwindCSS.experimental.configFile": {
     "packages/onimai-docs/tailwind.config.js": "packages/onimai-docs/**",
     "packages/onimai/tailwind.config.js": "packages/onimai/**",
-    "packages/onimai-qwik/tailwind.config.js": "packages/onimai-qwik/**"
+    "packages/onimai-qwik/tailwind.config.cjs": "packages/onimai-qwik/**"
   }
 }

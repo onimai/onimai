@@ -26,9 +26,7 @@ export const Modal = component$((props: Props) => {
         )}
         <div class="modal-content">
           {props.closable !== false && (
-            <label class="modal-close" tabIndex={0} for={props.id}>
-              <Close class="w-4 h-4" />
-            </label>
+            <label class="modal-close" tabIndex={0} for={props.id} />
           )}
           <Slot />
           <div class="modal-actions">

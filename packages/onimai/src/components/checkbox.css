@@ -1,0 +1,14 @@
+.checkbox {
+  @apply appearance-none h-4 w-4 rounded-sm border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.checkbox:checked {
+    background-size: 14px 14px;
+    background-position: 0 1px;
+    background-image: url('./icons/check.svg');
+
+    @media (prefers-color-scheme: dark) {
+      background-image: url('./icons/check.dark.svg');
+    }
+}
+

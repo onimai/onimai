@@ -3,8 +3,8 @@
 }
 
 .popover-content {
-  @apply absolute text-slate-900 bg-white dark:bg-slate-900 dark:text-white;
-  @apply rounded-md border border-slate-300 dark:border-slate-700;
+  @apply absolute text-slate-900 bg-white dark:bg-slate-700 dark:text-white;
+  @apply rounded-md shadow dark:shadow-none;
   @apply opacity-0 invisible z-10;
 
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out,
@@ -14,25 +14,25 @@
 .popover-right,
 .popover-right-top,
 .popover-right-bottom {
-  @apply translate-x-4 left-full;
+  @apply left-full;
 }
 
 .popover-left,
 .popover-left-top,
 .popover-left-bottom {
-  @apply -translate-x-4 right-full;
+  @apply right-full;
 }
 
 .popover-top,
 .popover-top-left,
 .popover-top-right {
-  @apply -translate-y-4 bottom-full;
+  @apply bottom-full;
 }
 
 .popover-bottom,
 .popover-bottom-left,
 .popover-bottom-right {
-  @apply translate-y-4 top-full;
+  @apply top-full;
 }
 
 .popover-right-top,
@@ -65,35 +65,35 @@
   @apply left-1/2 -translate-x-1/2;
 }
 
-.popover-focus :focus +,
-.popover-hover :focus +,
-.popover-hover:hover {
-  & .popover-content {
+.popover-focus :focus,
+.popover-hover :focus,
+.popover-hover :hover {
+  & + .popover-content {
     @apply opacity-100 visible;
     transition-timing-function: ease-in-out, ease-in-out, step-start;
   }
 
-  & .popover-right,
-  & .popover-right-top,
-  & .popover-right-bottom {
+  & + .popover-right,
+  & + .popover-right-top,
+  & + .popover-right-bottom {
     @apply translate-x-2;
   }
 
-  & .popover-left,
-  & .popover-left-top,
-  & .popover-left-bottom {
+  & + .popover-left,
+  & + .popover-left-top,
+  & + .popover-left-bottom {
     @apply -translate-x-2;
   }
 
-  & .popover-top,
-  & .popover-top-left,
-  & .popover-top-right {
+  & + .popover-top,
+  & + .popover-top-left,
+  & + .popover-top-right {
     @apply -translate-y-2;
   }
 
-  & .popover-bottom,
-  & .popover-bottom-left,
-  & .popover-bottom-right {
+  & + .popover-bottom,
+  & + .popover-bottom-left,
+  & + .popover-bottom-right {
     @apply translate-y-2;
   }
 }
