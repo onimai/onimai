@@ -3,12 +3,11 @@
 }
 
 .checkbox:checked {
-    background-size: 14px 14px;
-    background-position: 0 1px;
-    background-image: url('./icons/check.svg');
+  background-size: 14px 14px;
+  background-position: 0 1px;
+  background-image: url("./icons/check.svg");
 
-    @media (prefers-color-scheme: dark) {
-      background-image: url('./icons/check.dark.svg');
-    }
+  @media (prefers-color-scheme: dark) {
+    background-image: url("./icons/check.dark.svg");
+  }
 }
-

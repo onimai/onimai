@@ -35,7 +35,7 @@ export const Drawer = component$((props: Props) => {
   return (
     <>
       <input type="checkbox" class="drawer-toggle" hidden id={props.id} />
-      <div class={`drawer ${direction}`}>
+      <div class={`drawer not-prose ${direction}`}>
         {closable ? (
           <label for={props.id} class="drawer-background"></label>
         ) : (

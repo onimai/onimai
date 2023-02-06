@@ -43,7 +43,7 @@ export const Popover = component$((props: Props) => {
   const direction = directionClass[props.direction || "bottom-right"];
 
   return (
-    <div class={`popover ${trigger}`}>
+    <div class={`popover not-prose ${trigger}`}>
       <Slot name="trigger" />
       <div class={`popover-content ${direction} ${props.class}`}>
         <Slot />

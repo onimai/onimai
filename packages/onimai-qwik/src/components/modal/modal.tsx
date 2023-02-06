@@ -1,5 +1,4 @@
 import { component$, Slot } from "@builder.io/qwik";
-import { Close } from "../../icons/close";
 
 type Props = {
   /**
@@ -18,7 +17,7 @@ export const Modal = component$((props: Props) => {
   return (
     <>
       <input type="checkbox" class="modal-toggle" id={props.id} hidden />
-      <div class="modal">
+      <div class="modal not-prose">
         {props.closable !== false ? (
           <label class="modal-background" for={props.id}></label>
         ) : (

@@ -1,5 +1,6 @@
 {
   "css.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
   "tailwindCSS.experimental.configFile": {
     "packages/onimai-docs/tailwind.config.js": "packages/onimai-docs/**",
     "packages/onimai/tailwind.config.js": "packages/onimai/**",

@@ -1,0 +1,67 @@
+.prose {
+  h1:not(.not-prose h1) {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2:not(.not-prose h2) {
+    @apply mt-10 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 dark:border-b-slate-700;
+  }
+
+  h3:not(.not-prose h3) {
+    @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  p:not(.not-prose p) {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  a[href]:not(.not-prose a) {
+    @apply font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50;
+  }
+
+  blockquote:not(.not-prose blockquote) {
+    @apply mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 dark:border-slate-600 dark:text-slate-200;
+  }
+
+  ul:not(.not-prose ul) {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+  }
+
+  ol:not(.not-prose ol) {
+    @apply my-6 ml-6 list-decimal [&>li]:mt-2;
+  }
+
+  table:not(.not-prose table) {
+    @apply my-6 w-full overflow-y-auto;
+
+    tr {
+      @apply m-0 border-t border-slate-300 p-0 even:bg-slate-100 dark:border-slate-700 dark:even:bg-slate-800;
+    }
+
+    th,
+    td {
+      @apply border border-slate-200 px-4 py-2 text-left dark:border-slate-700;
+
+      &[align="center"] {
+        @apply text-center;
+      }
+
+      &[align="right"] {
+        @apply text-right;
+      }
+    }
+
+    th {
+      @apply font-bold;
+    }
+  }
+
+  code:not(.not-prose code):not(pre code) {
+    @apply rounded bg-slate-100 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-900 dark:bg-slate-800 dark:text-slate-400;
+  }
+
+  pre:not(.not-prose pre) {
+    @apply mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-700 dark:bg-slate-800 p-4 text-slate-100;
+    @apply border border-slate-700;
+  }
+}

@@ -9,6 +9,8 @@ import style from "./global.css?inline";
 export default component$(() => {
   useStyles$(style);
 
+  const haskell = `main :: IO ()\nmain = putStrLn . show . sum . map read . words =<< getLine`;
+
   return (
     <>
       <head>
@@ -160,6 +162,73 @@ export default component$(() => {
             <input type="checkbox" class="checkbox" />
             <span>Yes you are right</span>
           </label>
+        </details>
+
+        <details>
+          <summary>Typography</summary>
+          <article class="prose">
+            <h1>Heading One</h1>
+            <h2>Heading Two</h2>
+            <p>Lorem ipsum, bala bala</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Sex</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mahiro</td>
+                  <td>Male</td>
+                  <td>???</td>
+                </tr>
+                <tr>
+                  <td>Mihari</td>
+                  <td>Female</td>
+                  <td>???</td>
+                </tr>
+                <tr>
+                  <td>Kaede</td>
+                  <td>Female</td>
+                  <td>???</td>
+                </tr>
+                <tr>
+                  <td>Momiji</td>
+                  <td>Female</td>
+                  <td>???</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre>
+              <code>{haskell}</code>
+            </pre>
+            <h3>Heading Three</h3>
+            <p>
+              This is a sentence with <code>code</code> and{" "}
+              <a href="#">links</a>.
+            </p>
+            <p>
+              We <b>call</b> a human <strong>Futanari</strong> iff <i>he/she</i>
+              :
+            </p>
+            <ol>
+              <li>Have a dick</li>
+              <li>Have a pussy</li>
+            </ol>
+            <blockquote>
+              Always, everywhere God is present, and always He seeks to discover
+              Himself to each one.
+              <blockquote>Maybe better</blockquote>
+            </blockquote>
+            <ul>
+              <li>list 1</li>
+              <li>list 2</li>
+              <li>list 3</li>
+              <li>list 4</li>
+            </ul>
+          </article>
         </details>
       </body>
     </>
