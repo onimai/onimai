@@ -1,6 +1,8 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
+import { Button } from "./components/button/button";
 import { Drawer } from "./components/drawer/drawer";
 import { Modal } from "./components/modal/modal";
+import { Popover } from "./components/popover/popover";
 
 import style from "./global.css?inline";
 
@@ -72,94 +74,75 @@ export default component$(() => {
         <details>
           <summary>Popovers</summary>
           <div class="flex gap-4 flex-wrap">
-            <div class="popover popover-focus">
-              <button class="btn">Right</button>
-              <div class="popover-content popover-right w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Right Top</button>
-              <div class="popover-content popover-right-top w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Right Bottom</button>
-              <div class="popover-content popover-right-bottom w-32 p-4">
-                hello world
-              </div>
-            </div>
+            <Popover direction="right" class="w-32 p-4">
+              <Button q:slot="trigger">Right</Button>
+              This is right popover
+            </Popover>
+            <Popover direction="right-top" class="w-32 p-4">
+              <Button q:slot="trigger">Right Top</Button>
+              This is right top popover
+            </Popover>
+            <Popover direction="right-bottom" class="w-32 p-4">
+              <Button q:slot="trigger">Right Bottom</Button>
+              This is right bottom popover
+            </Popover>
 
-            <div class="popover popover-focus">
-              <button class="btn">Left</button>
-              <div class="popover-content popover-left w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Left Top</button>
-              <div class="popover-content popover-left-top w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Left Bottom</button>
-              <div class="popover-content popover-left-bottom w-32 p-4">
-                hello world
-              </div>
-            </div>
+            <Popover direction="left" class="w-32 p-4">
+              <Button q:slot="trigger">Left</Button>
+              This is left popover
+            </Popover>
+            <Popover direction="left-top" class="w-32 p-4">
+              <Button q:slot="trigger">Left Top</Button>
+              This is left top popover
+            </Popover>
+            <Popover direction="left-bottom" class="w-32 p-4">
+              <Button q:slot="trigger">Left Bottom</Button>
+              This is left bottom popover
+            </Popover>
 
-            <div class="popover popover-focus">
-              <button class="btn">Top</button>
-              <div class="popover-content popover-top w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Top Left</button>
-              <div class="popover-content popover-top-left w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Top Right</button>
-              <div class="popover-content popover-top-right w-32 p-4">
-                hello world
-              </div>
-            </div>
+            <Popover direction="top" class="w-32 p-4">
+              <Button q:slot="trigger">Top</Button>
+              This is top popover
+            </Popover>
+            <Popover direction="top-left" class="w-32 p-4">
+              <Button q:slot="trigger">Top Left</Button>
+              This is top left popover
+            </Popover>
+            <Popover direction="top-right" class="w-32 p-4">
+              <Button q:slot="trigger">Top Right</Button>
+              This is top right popover
+            </Popover>
 
-            <div class="popover popover-focus">
-              <button class="btn">Bottom</button>
-              <div class="popover-content popover-bottom w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Bottom Left</button>
-              <div class="popover-content popover-bottom-left w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-focus">
-              <button class="btn">Bottom Right</button>
-              <div class="popover-content popover-bottom-right w-32 p-4">
-                hello world
-              </div>
-            </div>
+            <Popover direction="bottom" class="w-32 p-4">
+              <Button q:slot="trigger">Bottom</Button>
+              This is bottom popover
+            </Popover>
+            <Popover direction="bottom-left" class="w-32 p-4">
+              <Button q:slot="trigger">Bottom Left</Button>
+              This is bottom left popover
+            </Popover>
+            <Popover direction="bottom-right" class="w-32 p-4">
+              <Button q:slot="trigger">Bottom Right</Button>
+              This is bottom right popover
+            </Popover>
 
-            <div class="popover popover-focus">
-              <input class="input" placeholder="focus"></input>
-              <div class="popover-content popover-bottom w-32 p-4">
-                hello world
-              </div>
-            </div>
-            <div class="popover popover-hover">
-              <input class="input" placeholder="hover"></input>
-              <div class="popover-content popover-bottom w-32 p-4">
-                hello world
-              </div>
-            </div>
+            <Popover direction="bottom" class="w-64 p-4">
+              <input
+                class="input w-64"
+                placeholder="Focus..."
+                q:slot="trigger"
+              />
+              Anything focus can trigger
+            </Popover>
+
+            <Popover trigger="hover" direction="bottom" class="w-64 p-4">
+              <input
+                class="input w-64"
+                placeholder="Hover..."
+                q:slot="trigger"
+              />
+              Anything hover can trigger
+            </Popover>
           </div>
         </details>
       </body>
