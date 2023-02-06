@@ -1,5 +1,5 @@
 import { component$, Slot } from "@builder.io/qwik";
-import { Close } from "./close";
+import { Close } from "../../icons/close";
 
 type Props = {
   /**
