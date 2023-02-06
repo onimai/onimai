@@ -1,0 +1,98 @@
+.popover {
+  @apply inline-block relative overflow-visible;
+}
+
+.popover-content {
+  @apply absolute text-slate-900 bg-white dark:bg-slate-900 dark:text-white;
+  @apply rounded-md border border-slate-300 dark:border-slate-700;
+  @apply opacity-0 invisible z-10;
+
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out,
+    visibility 150ms step-end;
+}
+
+.popover-right,
+.popover-right-top,
+.popover-right-bottom {
+  @apply translate-x-4 left-full;
+}
+
+.popover-left,
+.popover-left-top,
+.popover-left-bottom {
+  @apply -translate-x-4 right-full;
+}
+
+.popover-top,
+.popover-top-left,
+.popover-top-right {
+  @apply -translate-y-4 bottom-full;
+}
+
+.popover-bottom,
+.popover-bottom-left,
+.popover-bottom-right {
+  @apply translate-y-4 top-full;
+}
+
+.popover-right-top,
+.popover-left-top {
+  @apply bottom-0;
+}
+
+.popover-right-bottom,
+.popover-left-bottom {
+  @apply top-0;
+}
+
+.popover-right,
+.popover-left {
+  @apply top-1/2 -translate-y-1/2;
+}
+
+.popover-top-left,
+.popover-bottom-left {
+  @apply left-0;
+}
+
+.popover-top-right,
+.popover-bottom-right {
+  @apply right-0;
+}
+
+.popover-top,
+.popover-bottom {
+  @apply left-1/2 -translate-x-1/2;
+}
+
+.popover-focus :focus +,
+.popover-hover:hover {
+  & .popover-content {
+    @apply opacity-100 visible;
+    transition-timing-function: ease-in-out, ease-in-out, step-start;
+  }
+
+  & .popover-right,
+  & .popover-right-top,
+  & .popover-right-bottom {
+    @apply translate-x-2;
+  }
+
+  & .popover-left,
+  & .popover-left-top,
+  & .popover-left-bottom {
+    @apply -translate-x-2;
+  }
+
+  & .popover-top,
+  & .popover-top-left,
+  & .popover-top-right {
+    @apply -translate-y-2;
+  }
+
+  & .popover-bottom,
+  & .popover-bottom-left,
+  & .popover-bottom-right {
+    @apply translate-y-2;
+  }
+}
