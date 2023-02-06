@@ -230,6 +230,16 @@ export default component$(() => {
             </ul>
           </article>
         </details>
+
+        <details>
+          <summary>Progress</summary>
+          <div class="flex gap-4">
+            <progress class="progress" max="100" value="0"></progress>
+            <progress class="progress" max="100" value="20"></progress>
+            <progress class="progress" max="100" value="100"></progress>
+            <progress class="progress" max="100"></progress>
+          </div>
+        </details>
       </body>
     </>
   );
