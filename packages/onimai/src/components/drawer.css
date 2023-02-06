@@ -1,5 +1,5 @@
 .drawer {
-  @apply fixed top-0 left-0 w-screen h-screen backdrop-blur;
+  @apply fixed top-0 left-0 w-screen h-screen backdrop-blur z-10;
 
   /* animations */
   @apply invisible opacity-0;
