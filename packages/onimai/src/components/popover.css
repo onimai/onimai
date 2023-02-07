@@ -52,12 +52,12 @@
 
 .popover-top-left,
 .popover-bottom-left {
-  @apply left-0;
+  @apply right-0;
 }
 
 .popover-top-right,
 .popover-bottom-right {
-  @apply right-0;
+  @apply left-0;
 }
 
 .popover-top,

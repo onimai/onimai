@@ -1,5 +1,4 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import { Button } from "./components/button/button";
 import { Drawer } from "./components/drawer/drawer";
 import { Modal } from "./components/modal/modal";
 import { Popover } from "./components/popover/popover";
@@ -85,54 +84,78 @@ export default component$(() => {
           <summary>Popovers</summary>
           <div class="flex gap-4 flex-wrap">
             <Popover direction="right" class="w-64 p-4">
-              <Button q:slot="trigger">Right</Button>
+              <button class="btn" q:slot="trigger">
+                Right
+              </button>
               This is right popover
             </Popover>
             <Popover direction="right-top" class="w-64 p-4">
-              <Button q:slot="trigger">Right Top</Button>
+              <button class="btn" q:slot="trigger">
+                Right Top
+              </button>
               This is right top popover
             </Popover>
             <Popover direction="right-bottom" class="w-64 p-4">
-              <Button q:slot="trigger">Right Bottom</Button>
+              <button class="btn" q:slot="trigger">
+                Right Bottom
+              </button>
               This is right bottom popover
             </Popover>
 
             <Popover direction="left" class="w-64 p-4">
-              <Button q:slot="trigger">Left</Button>
+              <button class="btn" q:slot="trigger">
+                Left
+              </button>
               This is left popover
             </Popover>
             <Popover direction="left-top" class="w-64 p-4">
-              <Button q:slot="trigger">Left Top</Button>
+              <button class="btn" q:slot="trigger">
+                Left Top
+              </button>
               This is left top popover
             </Popover>
             <Popover direction="left-bottom" class="w-64 p-4">
-              <Button q:slot="trigger">Left Bottom</Button>
+              <button class="btn" q:slot="trigger">
+                Left Bottom
+              </button>
               This is left bottom popover
             </Popover>
 
             <Popover direction="top" class="w-64 p-4">
-              <Button q:slot="trigger">Top</Button>
+              <button class="btn" q:slot="trigger">
+                Top
+              </button>
               This is top popover
             </Popover>
             <Popover direction="top-left" class="w-64 p-4">
-              <Button q:slot="trigger">Top Left</Button>
+              <button class="btn" q:slot="trigger">
+                Top Left
+              </button>
               This is top left popover
             </Popover>
             <Popover direction="top-right" class="w-64 p-4">
-              <Button q:slot="trigger">Top Right</Button>
+              <button class="btn" q:slot="trigger">
+                Top Right
+              </button>
               This is top right popover
             </Popover>
 
             <Popover direction="bottom" class="w-64 p-4">
-              <Button q:slot="trigger">Bottom</Button>
+              <button class="btn" q:slot="trigger">
+                Bottom
+              </button>
               This is bottom popover
             </Popover>
             <Popover direction="bottom-left" class="w-64 p-4">
-              <Button q:slot="trigger">Bottom Left</Button>
+              <button class="btn" q:slot="trigger">
+                Bottom Left
+              </button>
               This is bottom left popover
             </Popover>
             <Popover direction="bottom-right" class="w-64 p-4">
-              <Button q:slot="trigger">Bottom Right</Button>
+              <button class="btn" q:slot="trigger">
+                Bottom Right
+              </button>
               This is bottom right popover
             </Popover>
 
