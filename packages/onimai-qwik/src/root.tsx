@@ -290,22 +290,21 @@ export default component$(() => {
 
         <details>
           <summary>Tabs</summary>
+          <Tabs name="menu">
+            <TabsItem id="preview" q:slot="trigger">
+              Preview
+            </TabsItem>
+            <p>This is preview page</p>
+            <TabsItem id="code" q:slot="trigger" checked>
+              Code
+            </TabsItem>
+            <p>This is code page</p>
+            <TabsItem id="disable" q:slot="trigger" disabled>
+              Disable
+            </TabsItem>
+            <p>This is disabled</p>
+          </Tabs>
         </details>
-
-        <Tabs name="menu">
-          <TabsItem id="preview" q:slot="trigger">
-            Preview
-          </TabsItem>
-          <p>This is preview page</p>
-          <TabsItem id="code" q:slot="trigger" checked>
-            Code
-          </TabsItem>
-          <p>This is code page</p>
-          <TabsItem id="disable" q:slot="trigger" disabled>
-            Disable
-          </TabsItem>
-          <p>This is disabled</p>
-        </Tabs>
       </body>
     </>
   );

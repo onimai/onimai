@@ -1,37 +1,37 @@
-.prose {
-  h1:not(.not-prose h1) {
+.prose :not(.not-prose *) {
+  &:is(h1) {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
 
-  h2:not(.not-prose h2) {
+  &:is(h2) {
     @apply mt-10 scroll-m-20 border-b border-b-slate-200 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 dark:border-b-slate-700;
   }
 
-  h3:not(.not-prose h3) {
+  &:is(h3) {
     @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
   }
 
-  p:not(.not-prose p) {
+  &:is(p) {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
 
-  a[href]:not(.not-prose a) {
+  &:is(a[href]) {
     @apply font-medium text-slate-900 underline underline-offset-4 dark:text-slate-50;
   }
 
-  blockquote:not(.not-prose blockquote) {
+  &:is(blockquote) {
     @apply mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 dark:border-slate-600 dark:text-slate-200;
   }
 
-  ul:not(.not-prose ul) {
+  &:is(ul) {
     @apply my-6 ml-6 list-disc [&>li]:mt-2;
   }
 
-  ol:not(.not-prose ol) {
+  &:is(ol) {
     @apply my-6 ml-6 list-decimal [&>li]:mt-2;
   }
 
-  table:not(.not-prose table) {
+  &:is(table) {
     @apply my-6 w-full overflow-y-auto;
 
     tr {
@@ -56,11 +56,11 @@
     }
   }
 
-  code:not(.not-prose code):not(pre code) {
+  &:is(code):not(pre code) {
     @apply rounded bg-slate-100 py-[0.2rem] px-[0.3rem] font-mono text-sm font-semibold text-slate-900 dark:bg-slate-800 dark:text-slate-400;
   }
 
-  pre:not(.not-prose pre) {
+  &:is(pre) {
     @apply mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-700 dark:bg-slate-800 p-4 text-slate-100;
     @apply border border-slate-700;
   }
