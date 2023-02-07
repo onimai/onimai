@@ -1,0 +1,44 @@
+/* FIXME: Firefox does not support :has() selector, this works on chrome well */
+/* https://bugzilla.mozilla.org/show_bug.cgi?id=418039 */
+.tabs {
+  .tabs-trigger {
+    @apply inline-flex items-center justify-center rounded-md bg-slate-100 p-1 dark:bg-slate-800;
+
+    .tabs-item {
+      @apply inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5 text-sm font-medium text-slate-700 transition-all dark:text-slate-200 cursor-pointer;
+    }
+
+    .tabs-item.disabled,
+    :disabled + .tabs-item {
+      @apply pointer-events-none opacity-50;
+    }
+
+    .tabs-item.active,
+    :checked + .tabs-item {
+      @apply bg-white text-slate-900 shadow-sm dark:bg-slate-900 dark:text-slate-100;
+    }
+  }
+
+  .tabs-panel {
+    @apply mt-2 rounded-md border border-slate-200 p-6 dark:border-slate-700;
+
+    > * {
+      @apply hidden;
+    }
+  }
+
+  .tabs-trigger:has(:nth-child(1):checked) + .tabs-panel > :nth-child(1),
+  .tabs-trigger:has(:nth-child(3):checked) + .tabs-panel > :nth-child(2),
+  .tabs-trigger:has(:nth-child(5):checked) + .tabs-panel > :nth-child(3),
+  .tabs-trigger:has(:nth-child(7):checked) + .tabs-panel > :nth-child(4),
+  .tabs-trigger:has(:nth-child(9):checked) + .tabs-panel > :nth-child(5),
+  .tabs-trigger:has(:nth-child(11):checked) + .tabs-panel > :nth-child(6),
+  .tabs-trigger:has(:nth-child(13):checked) + .tabs-panel > :nth-child(7),
+  .tabs-trigger:has(:nth-child(15):checked) + .tabs-panel > :nth-child(8),
+  .tabs-trigger:has(:nth-child(17):checked) + .tabs-panel > :nth-child(9),
+  .tabs-trigger:has(:nth-child(19):checked) + .tabs-panel > :nth-child(10),
+  .tabs-trigger:has(:nth-child(21):checked) + .tabs-panel > :nth-child(11),
+  .tabs-trigger:has(:nth-child(23):checked) + .tabs-panel > :nth-child(12) {
+    @apply block;
+  }
+}

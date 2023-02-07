@@ -2,6 +2,8 @@ import { component$, useStyles$ } from "@builder.io/qwik";
 import { Drawer } from "./components/drawer/drawer";
 import { Modal } from "./components/modal/modal";
 import { Popover } from "./components/popover/popover";
+import { Tabs } from "./components/tabs/tabs";
+import { TabsItem } from "./components/tabs/tabs-item";
 
 import style from "./global.css?inline";
 
@@ -285,6 +287,25 @@ export default component$(() => {
             <progress class="progress" max="100"></progress>
           </div>
         </details>
+
+        <details>
+          <summary>Tabs</summary>
+        </details>
+
+        <Tabs name="menu">
+          <TabsItem id="preview" q:slot="trigger">
+            Preview
+          </TabsItem>
+          <p>This is preview page</p>
+          <TabsItem id="code" q:slot="trigger" checked>
+            Code
+          </TabsItem>
+          <p>This is code page</p>
+          <TabsItem id="disable" q:slot="trigger" disabled>
+            Disable
+          </TabsItem>
+          <p>This is disabled</p>
+        </Tabs>
       </body>
     </>
   );
