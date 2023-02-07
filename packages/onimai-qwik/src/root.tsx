@@ -188,6 +188,28 @@ export default component$(() => {
         </details>
 
         <details>
+          <summary>Radio</summary>
+          <div>
+            <label class="flex items-center gap-4">
+              <input type="radio" name="rajio" class="radio" />
+              <span>Mahiro</span>
+            </label>
+            <label class="flex items-center gap-4">
+              <input type="radio" name="rajio" class="radio" />
+              <span>Mihari</span>
+            </label>
+            <label class="flex items-center gap-4">
+              <input type="radio" name="rajio" class="radio" />
+              <span>Kaede</span>
+            </label>
+            <label class="flex items-center gap-4">
+              <input type="radio" name="rajio" class="radio" />
+              <span>Momiji</span>
+            </label>
+          </div>
+        </details>
+
+        <details>
           <summary>Typography</summary>
           <article class="prose">
             <h1>Heading One</h1>
