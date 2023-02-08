@@ -1,11 +1,11 @@
 .popover {
-  @apply inline-block relative overflow-visible;
+  @apply relative inline-block overflow-visible;
 }
 
 .popover-content {
-  @apply absolute text-slate-900 bg-white dark:bg-slate-700 dark:text-white;
+  @apply absolute bg-white text-slate-900 dark:bg-slate-700 dark:text-white;
   @apply rounded-md shadow dark:shadow-none;
-  @apply opacity-0 invisible z-10;
+  @apply invisible z-10 opacity-0;
 
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out,
     visibility 150ms step-end;
@@ -71,7 +71,7 @@
 .popover-hover:hover > :first-child + .popover-content,
 .popover-content:focus,
 .popover-content:has(:focus) {
-  @apply opacity-100 visible;
+  @apply visible opacity-100;
   transition-timing-function: ease-in-out, ease-in-out, step-start;
 
   &.popover-right,

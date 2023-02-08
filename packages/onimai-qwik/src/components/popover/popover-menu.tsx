@@ -9,7 +9,7 @@ export const PopoverMenu = component$((props: Props) => {
   return (
     <div class="popover popover-hover menu-item">
       <Slot name="trigger" />
-      <div class={`popover-content popover-right-bottom -ml-2 ${props.class}`}>
+      <div class={`popover-right-bottom popover-content -ml-2 ${props.class}`}>
         <Slot />
       </div>
       <ChevronRight class="menu-icon-right" />

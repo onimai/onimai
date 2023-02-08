@@ -1,5 +1,5 @@
 .progress[value] {
-  @apply appearance-none h-4 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800;
+  @apply h-4 appearance-none overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800;
 
   &::-webkit-progress-bar {
     @apply bg-slate-200 dark:bg-slate-800;
@@ -15,7 +15,7 @@
 }
 
 .progress:not([value]) {
-  @apply appearance-none h-4 overflow-hidden rounded-full;
+  @apply h-4 appearance-none overflow-hidden rounded-full;
 
   &::-webkit-progress-bar {
     background-repeat: repeat;

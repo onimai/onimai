@@ -1,5 +1,5 @@
 .toggle {
-  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors dark:hover:bg-slate-800 focus:outline-none dark:text-slate-100 focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900 hover:bg-slate-100 dark:hover:text-slate-100;
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:text-slate-100 dark:hover:bg-slate-800 dark:hover:text-slate-100 dark:focus:ring-offset-slate-900;
 
   /* default variant */
   @apply bg-transparent;
@@ -11,7 +11,7 @@
 /* variants */
 
 .toggle-outline {
-  @apply bg-transparent border border-slate-200 hover:bg-slate-100 dark:border-slate-700;
+  @apply border border-slate-200 bg-transparent hover:bg-slate-100 dark:border-slate-700;
 }
 
 /* sizes */

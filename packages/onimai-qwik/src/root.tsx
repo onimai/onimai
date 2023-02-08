@@ -9,6 +9,7 @@ import { TabsItem } from "./components/tabs/tabs-item";
 import style from "./global.css?inline";
 import { BellAlert } from "./icons/bell-alert";
 import { BellSlash } from "./icons/bell-slash";
+import { Close } from "./icons/close";
 
 export default component$(() => {
   useStyles$(style);
@@ -34,7 +35,7 @@ export default component$(() => {
             <p class="opacity-60">Include stdio.h</p>
 
             <label
-              class="btn btn-subtle"
+              class="btn-subtle btn"
               for="hello"
               tabIndex={0}
               q:slot="action"
@@ -54,7 +55,7 @@ export default component$(() => {
             Drawer
           </label>
 
-          <Drawer id="world" class="p-4 w-96">
+          <Drawer id="world" class="w-96 p-4">
             <h2 class="text-2xl font-bold">Hello world</h2>
             <p class="opacity-60">Include stdio.h</p>
           </Drawer>
@@ -87,7 +88,7 @@ export default component$(() => {
 
         <details>
           <summary>Popovers</summary>
-          <div class="flex gap-4 flex-wrap">
+          <div class="flex flex-wrap gap-4">
             <Popover direction="right" class="w-64 p-4">
               <button class="btn" q:slot="trigger">
                 Right
@@ -358,7 +359,7 @@ export default component$(() => {
         <details>
           <summary>Menu</summary>
           <Popover class="w-64" direction="right">
-            <button class="btn btn-ghost" q:slot="trigger">
+            <button class="btn-ghost btn" q:slot="trigger">
               Open
             </button>
             <menu class="menu">
@@ -432,6 +433,50 @@ export default component$(() => {
               </label>
             </menu>
           </Popover>
+        </details>
+
+        <details>
+          <summary>Nav</summary>
+          <div class="w-64">
+            <nav class="nav">
+              <h2 class="nav-title">Title</h2>
+              <button class="active nav-item">
+                <BellAlert class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="nav-item">
+                <BellAlert class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="nav-item">
+                <BellAlert class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="nav-item">
+                <BellAlert class="h-4 w-4" />
+                Tatty
+              </button>
+            </nav>
+            <nav class="nav">
+              <h2 class="nav-title">Title</h2>
+              <button class="active nav-item">
+                <Close class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="nav-item">
+                <Close class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="active nav-item">
+                <Close class="h-4 w-4" />
+                Tatty
+              </button>
+              <button class="nav-item">
+                <Close class="h-4 w-4" />
+                Tatty
+              </button>
+            </nav>
+          </div>
         </details>
       </body>
     </>

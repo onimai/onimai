@@ -1,5 +1,5 @@
 .drawer {
-  @apply fixed top-0 left-0 w-screen h-screen backdrop-blur z-10;
+  @apply fixed top-0 left-0 z-10 h-screen w-screen backdrop-blur;
 
   /* animations */
   @apply invisible opacity-0;
@@ -12,11 +12,11 @@
 }
 
 .drawer-background {
-  @apply absolute top-0 left-0 w-full h-full bg-[#00000066];
+  @apply absolute top-0 left-0 h-full w-full bg-[#00000066];
 }
 
 .drawer-content {
-  @apply absolute top-0 h-full bg-white dark:bg-slate-900 transition-transform duration-300;
+  @apply absolute top-0 h-full bg-white transition-transform duration-300 dark:bg-slate-900;
 }
 
 .drawer > .drawer-content,

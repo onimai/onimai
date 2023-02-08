@@ -5,7 +5,7 @@
     @apply inline-flex items-center justify-center rounded-md bg-slate-100 p-1 dark:bg-slate-800;
 
     .tabs-item {
-      @apply inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5 text-sm font-medium text-slate-700 transition-all dark:text-slate-200 cursor-pointer;
+      @apply inline-flex min-w-[100px] cursor-pointer items-center justify-center rounded-[0.185rem] px-3 py-1.5 text-sm font-medium text-slate-700 transition-all dark:text-slate-200;
     }
 
     .tabs-item.disabled,
