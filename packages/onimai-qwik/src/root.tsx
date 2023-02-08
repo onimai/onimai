@@ -1,11 +1,14 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
 import { Drawer } from "./components/drawer/drawer";
+import { PopoverMenu } from "./components/popover/popover-menu";
 import { Modal } from "./components/modal/modal";
 import { Popover } from "./components/popover/popover";
 import { Tabs } from "./components/tabs/tabs";
 import { TabsItem } from "./components/tabs/tabs-item";
 
 import style from "./global.css?inline";
+import { BellAlert } from "./icons/bell-alert";
+import { BellSlash } from "./icons/bell-slash";
 
 export default component$(() => {
   useStyles$(style);
@@ -359,25 +362,74 @@ export default component$(() => {
               Open
             </button>
             <menu class="menu">
-              <li class="menu-item">Add</li>
-              <li class="menu-item disabled">Substract</li>
-              <li class="menu-item">Substract</li>
+              <li class="menu-item">
+                <BellAlert class="menu-icon" />
+                Add
+              </li>
+              <li class="menu-item disabled">
+                <BellSlash class="menu-icon" />
+                Substract
+              </li>
+              <li class="menu-item">
+                <BellSlash class="menu-icon" />
+                Substract
+              </li>
+              <PopoverMenu class="w-48">
+                <span q:slot="trigger">More Actions</span>
+                <menu class="menu">
+                  <li class="menu-item">Multiply</li>
+                  <li class="menu-item">Divide</li>
+                  <li class="menu-item">Module</li>
+                </menu>
+              </PopoverMenu>
 
               <hr class="menu-separator" />
 
               <h3 class="menu-title">Checkbox</h3>
-              <li class="menu-checkbox">Make Love with Mihari</li>
-              <li class="menu-checkbox checked">Make Love with Mahiro</li>
-              <li class="menu-checkbox">Make Love with Kaede</li>
-              <li class="menu-checkbox disabled">Make Love with Momiji</li>
+              <label class="menu-checkbox" tabIndex={0}>
+                <input type="checkbox" hidden checked />
+                Make Love with Mihari
+              </label>
+              <label class="menu-checkbox" tabIndex={0}>
+                <input type="checkbox" hidden checked />
+                Make Love with Mahiro
+              </label>
+              <label class="menu-checkbox" tabIndex={0}>
+                <input type="checkbox" hidden checked />
+                Make Love with Kaede
+              </label>
+              <label class="menu-checkbox" tabIndex={0}>
+                <input type="checkbox" hidden />
+                Make Love with Momiji
+              </label>
+              <label class="menu-checkbox" tabIndex={0}>
+                <input type="checkbox" hidden disabled />
+                Make Love with Asahi
+              </label>
 
               <hr class="menu-separator" />
 
               <h3 class="menu-title">Radio</h3>
-              <li class="menu-radio">Make Love with Mihari</li>
-              <li class="menu-radio checked">Make Love with Mahiro</li>
-              <li class="menu-radio">Make Love with Kaede</li>
-              <li class="menu-radio disabled">Make Love with Momiji</li>
+              <label class="menu-radio" tabIndex={0}>
+                <input type="radio" name="menu-radio-1" hidden />
+                Make Love with Mihari
+              </label>
+              <label class="menu-radio" tabIndex={0}>
+                <input type="radio" name="menu-radio-1" hidden checked />
+                Make Love with Mahiro
+              </label>
+              <label class="menu-radio" tabIndex={0}>
+                <input type="radio" name="menu-radio-1" hidden />
+                Make Love with Kaede
+              </label>
+              <label class="menu-radio" tabIndex={0}>
+                <input type="radio" name="menu-radio-1" hidden />
+                Make Love with Momiji
+              </label>
+              <label class="menu-radio" tabIndex={0}>
+                <input type="radio" name="menu-radio-1" hidden disabled />
+                Make Love with Asahi
+              </label>
             </menu>
           </Popover>
         </details>
