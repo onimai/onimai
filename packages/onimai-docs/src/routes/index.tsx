@@ -1,6 +1,6 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
 import { type DocumentHead, Link } from "@builder.io/qwik-city";
-import GithubIcon from "~/components/icons/GithubIcon";
+import Header from "~/components/Header";
 
 export default component$(() => {
   useStyles$(`
@@ -14,32 +14,7 @@ export default component$(() => {
   }`);
   return (
     <div class="bg-scroll bg-repeat [background-image:_url(https://onimai.jp/assets/img/common/mainbg.jpg)] [background-size:_800px_560px] [animation:_bg-scroll_linear_60s_infinite]">
-      <div
-        class="sticky top-0 z-10 flex h-20 justify-between p-4"
-        window:onScroll$={(_, el) => {
-          if (window.scrollY > 0) {
-            el.classList.add(...["bg-white", "shadow-lg", "bg-opacity-90"]);
-          } else {
-            el.classList.remove(...["bg-white", "shadow-lg", "bg-opacity-90"]);
-          }
-        }}
-      >
-        <img class="ml-4" src="https://onimai.jp/assets/img/common/logo.png" />
-        <div class="mr-4 flex items-center space-x-4">
-          <Link class="btn-outline btn" href="/docs/get-start">
-            Get Start
-          </Link>
-          <Link class="btn-outline btn" href="/docs/drawer">
-            Drawer
-          </Link>
-          <Link
-            class="btn-outline btn"
-            href="https://github.com/Ling-yunchi/onimaiui"
-          >
-            <GithubIcon />
-          </Link>
-        </div>
-      </div>
+      <Header></Header>
       <div class="-mt-20 flex flex-col items-center">
         <div class="flex w-full flex-col items-center bg-[rgba(0,0,0,0.4)] bg-[url(https://onimai.jp/episode/img/01_05.jpg)] bg-cover bg-center bg-blend-darken">
           <div class="mt-20 flex w-full max-w-4xl flex-wrap justify-between">
