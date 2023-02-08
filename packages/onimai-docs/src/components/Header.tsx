@@ -5,7 +5,7 @@ import GithubIcon from "./icons/GithubIcon";
 export default component$(() => {
   return (
     <div
-      class="sticky top-0 z-10 flex h-20 justify-between p-4"
+      class="sticky top-0 flex h-20 justify-between border-b border-b-slate-200 p-4 dark:border-b-slate-700"
       window:onScroll$={(_, el) => {
         if (window.scrollY > 0) {
           el.classList.add(...["bg-white", "shadow-lg", "bg-opacity-90"]);
