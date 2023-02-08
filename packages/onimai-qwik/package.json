@@ -2,6 +2,7 @@
   "name": "@onimai/qwik",
   "version": "0.0.1",
   "description": "Create a reusable Qwik component library",
+  "sideEffects": false,
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
