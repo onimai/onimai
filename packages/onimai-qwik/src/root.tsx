@@ -305,6 +305,24 @@ export default component$(() => {
             <p>This is disabled</p>
           </Tabs>
         </details>
+
+        <details>
+          <summary>Switch</summary>
+          <div class="space-y-2">
+            <label class="flex items-center gap-4">
+              <input type="checkbox" class="switch" />
+              <span>Yes you are right</span>
+            </label>
+            <label class="flex items-center gap-4">
+              <input type="checkbox" class="switch" checked />
+              <span>Yes you are wrong</span>
+            </label>
+            <label class="flex items-center gap-4">
+              <input type="checkbox" class="switch" disabled />
+              <span>This feature is blocked</span>
+            </label>
+          </div>
+        </details>
       </body>
     </>
   );

@@ -38,7 +38,19 @@
   .tabs-trigger:has(:nth-child(17):checked) + .tabs-panel > :nth-child(9),
   .tabs-trigger:has(:nth-child(19):checked) + .tabs-panel > :nth-child(10),
   .tabs-trigger:has(:nth-child(21):checked) + .tabs-panel > :nth-child(11),
-  .tabs-trigger:has(:nth-child(23):checked) + .tabs-panel > :nth-child(12) {
+  .tabs-trigger:has(:nth-child(23):checked) + .tabs-panel > :nth-child(12),
+  .tabs-trigger:has(.active:nth-child(1)) + .tabs-panel > :nth-child(1),
+  .tabs-trigger:has(.active:nth-child(2)) + .tabs-panel > :nth-child(2),
+  .tabs-trigger:has(.active:nth-child(3)) + .tabs-panel > :nth-child(3),
+  .tabs-trigger:has(.active:nth-child(4)) + .tabs-panel > :nth-child(4),
+  .tabs-trigger:has(.active:nth-child(5)) + .tabs-panel > :nth-child(5),
+  .tabs-trigger:has(.active:nth-child(6)) + .tabs-panel > :nth-child(6),
+  .tabs-trigger:has(.active:nth-child(7)) + .tabs-panel > :nth-child(7),
+  .tabs-trigger:has(.active:nth-child(8)) + .tabs-panel > :nth-child(8),
+  .tabs-trigger:has(.active:nth-child(9)) + .tabs-panel > :nth-child(9),
+  .tabs-trigger:has(.active:nth-child(10)) + .tabs-panel > :nth-child(10),
+  .tabs-trigger:has(.active:nth-child(11)) + .tabs-panel > :nth-child(11),
+  .tabs-trigger:has(.active:nth-child(12)) + .tabs-panel > :nth-child(12) {
     @apply block;
   }
 }
