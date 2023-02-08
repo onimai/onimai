@@ -16,10 +16,10 @@ export default component$(() => {
     >
       <img class="ml-4" src="https://onimai.jp/assets/img/common/logo.png" />
       <div class="mr-4 flex items-center space-x-4">
-        <Link class="btn-outline btn" href="/docs/get-start">
+        <Link class="btn-outline btn" href="/docs/guide/get-start">
           Get Start
         </Link>
-        <Link class="btn-outline btn" href="/docs/drawer">
+        <Link class="btn-outline btn" href="/docs/components/drawer">
           Drawer
         </Link>
         <Link

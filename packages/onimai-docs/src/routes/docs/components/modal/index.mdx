@@ -1,0 +1,83 @@
+---
+title: Modals
+---
+
+import { Modal } from "@onimai/qwik";
+import { Preview } from "~/components/preview/preview";
+
+# Modals
+
+## Preview
+
+<Preview>
+  <div class="inline-flex gap-2">
+    <label for="modal-3" class="btn" tabIndex={0}>
+      Example
+    </label>
+    <input type="checkbox" hidden id="modal-3" />
+    <div class="modal">
+      <div class="modal-background" />
+      <div class="modal-content">
+        <h2 class="text-2xl font-bold">Create new waifu</h2>
+        <p class="opacity-60">Will you marry Mahiro?</p>
+        <div class="flex justify-end">
+          <label class="btn" for="modal-3" tabIndex={0}>
+            Yes
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <label class="btn btn-subtle" for="modal-1" tabIndex={0}>
+      Qwik
+    </label>
+    <Modal id="modal-1">
+      <h2 class="text-2xl font-bold">Create new waifu</h2>
+      <p class="opacity-60">Are you sure to mark Mahiro as your new waifu?</p>
+      <button class="btn-subtle btn" q:slot="action">
+        No
+      </button>
+      <label class="btn" for="modal-1" tabIndex={0} q:slot="action">
+        Yes
+      </label>
+    </Modal>
+
+    <label class="btn btn-subtle" for="modal-2" tabIndex={0}>
+      Qwik (inclosable)
+    </label>
+    <Modal id="modal-2" closable={false}>
+      <h2 class="text-2xl font-bold">You cannot close me</h2>
+      <p class="opacity-60">Unless you press the Yes button</p>
+      <button class="btn-subtle btn" q:slot="action">
+        No
+      </button>
+      <label class="btn" for="modal-2" tabIndex={0} q:slot="action">
+        Yes
+      </label>
+    </Modal>
+
+  </div>
+</Preview>
+
+## Usage
+
+```jsx
+// id should be globally unique, anything `:checked` can trigger modal to open
+<label class="btn" for="modal-x" tabIndex={0}>Example</label>
+<input type="checkbox" hidden id="modal-x">
+<div class="modal">
+  <div class="modal-background" />
+  <div class="modal-content">
+    <h2 class="text-2xl font-bold">Create new waifu</h2>
+    <p class="opacity-60">Will you marry Mahiro?</p>
+    <p><label class="btn" for="modal-x" tabIndex={0}>Yes</label></p>
+  </div>
+</div>
+```
+
+## Options
+
+| Field      | Type       | Description                                                                      |
+| ---------- | ---------- | -------------------------------------------------------------------------------- |
+| `id`       | `string`   | A globally unique id for this modal, you can use `<labal for="id" />` to open it |
+| `closable` | `boolean?` | Set `false` to remove top-right close button and background label element        |

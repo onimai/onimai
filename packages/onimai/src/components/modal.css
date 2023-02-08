@@ -6,7 +6,7 @@
   transition: opacity 300ms ease-in-out, visibility 300ms step-end;
 }
 
-.modal-toggle:checked + .modal {
+:checked + .modal {
   @apply visible opacity-100;
   transition-timing-function: ease-in-out, step-start;
 }
@@ -16,24 +16,13 @@
 }
 
 .modal-content {
-  @apply relative w-96 max-w-full scale-50 rounded-md bg-white px-8 py-6 text-slate-900 transition duration-300 dark:bg-slate-900 dark:text-white;
+  @apply relative w-96 max-w-full scale-50 rounded-md bg-white px-8 py-6 text-slate-900 transition dark:bg-slate-900 dark:text-white;
 }
 
-.modal-close {
-  @apply absolute right-4 top-4 h-4 w-4 cursor-pointer rounded-md opacity-80 transition hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900;
-
-  background-size: 1rem 1rem;
-  background-image: url("./icons/close.svg");
-
-  @media (prefers-color-scheme: dark) {
-    background-image: url("./icons/close.dark.svg");
-  }
-}
-
-.modal-toggle:checked + .modal > .modal-content {
+:checked + .modal > .modal-content {
   @apply scale-100;
 }
 
 .modal-actions {
-  @apply mt-4 flex flex-wrap justify-end gap-4 overflow-visible;
+  @apply overflow-visible;
 }

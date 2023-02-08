@@ -16,7 +16,7 @@
 }
 
 .drawer-content {
-  @apply absolute top-0 h-full bg-white transition-transform duration-300 dark:bg-slate-900;
+  @apply absolute top-0 h-full bg-white transition-transform dark:bg-slate-900;
 }
 
 .drawer > .drawer-content,

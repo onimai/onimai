@@ -1,0 +1,33 @@
+---
+title: Getting Start
+---
+
+# Getting Start
+
+## Install
+
+```shell
+yarn add onimai @onimai/qwik
+```
+
+Then modify your `tailwind.config.js`:
+
+```js
+module.exports = {
+  // 1. Add `./node_modules/@onimai/qwik/**/*.{cjs,mjs}` to content
+  content: [
+    "./node_modules/@onimai/qwik/**/*.{cjs,mjs}"
+  ]
+  // 2. Add `require('onimai')` to plugins
+  plugins: [
+    require("onimai")
+  ],
+};
+```
+
+Here is a list of our libraries.
+
+- `onimai` is our tailwind plugin library, which only contains CSS code.
+- `@onimai/qwik` is our Qwik Component library, which only contains js files. Therefore, you need to manually configurate tailwind to generate styles for this library.
+- `@onimai/react` may exist in the future
+- `@onimai/vue` may exist in the future

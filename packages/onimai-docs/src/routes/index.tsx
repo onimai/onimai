@@ -74,7 +74,7 @@ export default component$(() => {
               />
             </p>
             <p>
-              <Link class="btn-outline btn" href="/docs/get-start">
+              <Link class="btn-outline btn" href="/docs/guide/get-start">
                 Get Start
               </Link>
             </p>

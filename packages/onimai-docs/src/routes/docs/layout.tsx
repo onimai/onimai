@@ -1,5 +1,4 @@
 import { component$, Slot } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import Header from "~/components/Header";
 import { NavLink } from "~/components/nav-link/nav-link";
 
@@ -12,16 +11,16 @@ export default component$(() => {
         </h1>
         <nav class="nav">
           <h2 class="nav-title">Get Start</h2>
-          <NavLink class="nav-item" href="/docs/get-start">
+          <NavLink class="nav-item" href="/docs/guide/get-start">
             Install
           </NavLink>
         </nav>
         <nav class="nav">
           <h2 class="nav-title">Components</h2>
-          <NavLink class="nav-item" href="/docs/modal">
+          <NavLink class="nav-item" href="/docs/components/modal">
             Modal
           </NavLink>
-          <NavLink class="nav-item" href="/docs/drawer">
+          <NavLink class="nav-item" href="/docs/components/drawer">
             Drawer
           </NavLink>
         </nav>

@@ -17,7 +17,7 @@ type Props = {
 export const Modal = component$((props: Props) => {
   return (
     <>
-      <input type="checkbox" class="modal-toggle" id={props.id} hidden />
+      <input type="checkbox" id={props.id} hidden />
       <div class="modal not-prose">
         {props.closable !== false ? (
           <label class="modal-background" for={props.id}></label>
@@ -35,7 +35,7 @@ export const Modal = component$((props: Props) => {
             </label>
           )}
           <Slot />
-          <div class="modal-actions">
+          <div class="mt-4 flex flex-wrap justify-end gap-4">
             <Slot name="action" />
           </div>
         </div>
