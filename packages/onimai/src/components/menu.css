@@ -1,24 +1,60 @@
 .menu {
-  @apply z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400;
+  @apply relative z-50 min-w-[8rem] overflow-visible rounded-md border border-slate-100 bg-white p-1 text-slate-700 shadow-md dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400;
 }
 
 .menu-item,
 .menu-checkbox,
 .menu-radio {
-  @apply relative flex items-center cursor-default select-none rounded-sm py-1.5 px-2 text-sm font-medium outline-none hover:bg-slate-100 dark:hover:bg-slate-700 pl-8 [&.disabled]:pointer-events-none [&.disabled]:opacity-50 disabled:pointer-events-none disabled:opacity-50;
+  @apply relative flex items-center cursor-default select-none rounded-sm py-1.5 px-2 text-sm font-medium outline-none hover:bg-slate-100 dark:hover:bg-slate-700 focus:bg-slate-100 dark:focus:bg-slate-700 pl-8 w-full;
+
+  &.disabled,
+  :disabled + &,
+  &:has(:disabled) {
+    @apply pointer-events-none opacity-50;
+  }
 }
 
 .menu-checkbox,
 .menu-radio {
-  @apply before:absolute before:left-2 before:flex before:h-3.5 before:w-3.5 before:items-center before:justify-center [&.checked]:before:bg-cover [&.checked]:before:bg-center;
+  @apply before:absolute;
 }
 
-.menu-checkbox {
-  @apply [&.checked]:before:bg-[url('./icons/menucheck.svg')] [&.checked]:dark:before:bg-[url('./icons/menucheck.dark.svg')];
+.menu-icon,
+.menu-icon-right {
+  @apply absolute;
 }
 
-.menu-radio {
-  @apply [&.checked]:before:bg-[url('./icons/menucircle.svg')] [&.checked]:dark:before:bg-[url('./icons/menucircle.dark.svg')];
+.menu-icon,
+.menu-icon-right,
+.menu-checkbox::before,
+.menu-radio::before {
+  @apply flex h-3.5 w-3.5 items-center justify-center;
+}
+
+.menu-icon,
+.menu-checkbox::before,
+.menu-radio::before {
+  @apply left-2;
+}
+
+.menu-icon-right {
+  @apply right-2;
+}
+
+.checked,
+:checked +,
+:has(:checked) {
+  &:is(.menu-checkbox, .menu-radio) {
+    @apply before:bg-cover before:bg-center;
+  }
+
+  &.menu-checkbox {
+    @apply before:bg-[url('./icons/menucheck.svg')] dark:before:bg-[url('./icons/menucheck.dark.svg')];
+  }
+
+  &.menu-radio {
+    @apply before:bg-[url('./icons/menucircle.svg')] dark:before:bg-[url('./icons/menucircle.dark.svg')];
+  }
 }
 
 .menu-separator {
