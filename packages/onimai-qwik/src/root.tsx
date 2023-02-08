@@ -351,6 +351,36 @@ export default component$(() => {
             </label>
           </div>
         </details>
+
+        <details>
+          <summary>Menu</summary>
+          <Popover class="w-64" direction="right">
+            <button class="btn btn-ghost" q:slot="trigger">
+              Open
+            </button>
+            <menu class="menu">
+              <li class="menu-item">Add</li>
+              <li class="menu-item disabled">Substract</li>
+              <li class="menu-item">Substract</li>
+
+              <hr class="menu-separator" />
+
+              <h3 class="menu-title">Checkbox</h3>
+              <li class="menu-checkbox">Make Love with Mihari</li>
+              <li class="menu-checkbox checked">Make Love with Mahiro</li>
+              <li class="menu-checkbox">Make Love with Kaede</li>
+              <li class="menu-checkbox disabled">Make Love with Momiji</li>
+
+              <hr class="menu-separator" />
+
+              <h3 class="menu-title">Radio</h3>
+              <li class="menu-radio">Make Love with Mihari</li>
+              <li class="menu-radio checked">Make Love with Mahiro</li>
+              <li class="menu-radio">Make Love with Kaede</li>
+              <li class="menu-radio disabled">Make Love with Momiji</li>
+            </menu>
+          </Popover>
+        </details>
       </body>
     </>
   );
