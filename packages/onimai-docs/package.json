@@ -21,8 +21,8 @@
     "qwik": "qwik"
   },
   "dependencies": {
-    "onimai": "^0.0.1",
-    "@onimai/qwik": "^0.0.1"
+    "@onimai/qwik": "^0.0.1",
+    "onimai": "^0.0.1"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.17.4",
@@ -38,6 +38,7 @@
     "node-fetch": "3.3.0",
     "postcss": "^8.4.16",
     "prettier": "2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.2",
     "tailwindcss": "^3.1.8",
     "typescript": "4.9.5",
     "undici": "5.16.0",
