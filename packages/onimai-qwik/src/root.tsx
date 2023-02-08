@@ -323,6 +323,34 @@ export default component$(() => {
             </label>
           </div>
         </details>
+
+        <details>
+          <summary>Toggle</summary>
+          <div class="flex flex-wrap gap-2">
+            <input type="checkbox" hidden id="toggle-1" />
+            <label class="toggle" for="toggle-1" tabIndex={0}>
+              Arch
+            </label>
+
+            <input type="checkbox" hidden id="toggle-2" />
+            <label class="toggle" for="toggle-2" tabIndex={0}>
+              Ubuntu
+            </label>
+
+            <button class="toggle active">Active</button>
+            <button class="toggle disabled">Disabled</button>
+
+            <input type="checkbox" hidden id="toggle-3" />
+            <label class="toggle toggle-sm" for="toggle-3" tabIndex={0}>
+              Debian
+            </label>
+
+            <input type="checkbox" hidden id="toggle-4" />
+            <label class="toggle toggle-lg" for="toggle-4" tabIndex={0}>
+              Fedora
+            </label>
+          </div>
+        </details>
       </body>
     </>
   );

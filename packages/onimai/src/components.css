@@ -8,5 +8,6 @@
 @import "./components/radio.css";
 @import "./components/tabs.css";
 @import "./components/switch.css";
+@import "./components/toggle.css";
 
 @import "./components/typography.css";
