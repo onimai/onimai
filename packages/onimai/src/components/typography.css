@@ -11,6 +11,10 @@
     @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
   }
 
+  &:is(h4) {
+    @apply mt-8 scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
   &:is(p) {
     @apply leading-7 [&:not(:first-child)]:mt-6;
   }
