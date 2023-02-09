@@ -5,7 +5,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(() => {
   return {
-    plugins: [qwikCity(), qwikVite({
+    plugins: [qwikCity({
+      basePathname: '/onimaiui',
+    }), qwikVite({
       client:{
         outDir: '../../docs',
       }
