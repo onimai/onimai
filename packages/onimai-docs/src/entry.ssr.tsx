@@ -21,6 +21,7 @@ export default function (opts: RenderToStreamOptions) {
   return renderToStream(<Root />, {
     manifest,
     ...opts,
+    base: "/onimaiui/",
     // Use container attributes to set attributes on the html tag.
     containerAttributes: {
       lang: "en-us",
