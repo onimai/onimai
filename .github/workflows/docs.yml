@@ -34,7 +34,7 @@ jobs:
       - name: Build
         uses: borales/actions-yarn@v4
         with:
-          cmd: workspace onimai-docs run build
+          cmd: build
       - name: Build Qwik SSG
         uses: borales/actions-yarn@v4
         with:
