@@ -3,25 +3,47 @@ title: Drawers
 ---
 
 import { Drawer } from "@onimai/qwik";
+import { Preview } from "~/components/preview/preview";
 
 # Drawers
+
+## Preview
+
+{/* prettier-ignore */}
+<Preview>
+  <label class="btn" tabIndex={0} for="drawer-x">
+  <input type="checkbox" hidden id="drawer-x">
+  <div class="drawer">
+    <label class="drawer-background" for="drawer-x" />
+    <div class="drawer-content w-96 p-4">
+      <h2 class="text-2xl font-bold">Hello world</h2>
+      <p>Onimai is the best anime I've ever seen!!!</p>
+    </div>
+  </div>
+  {/* prettier-ignore */}
+  <label class="btn-subtle btn" tabIndex={0} for="drawer-1">Right</label>
+  <Drawer id="drawer-1" class="w-96 p-4">
+    <h2 class="text-2xl font-bold">Hello world</h2>
+    <p>Onimai is the best anime I've ever seen!!!</p>
+  </Drawer>
+  {/* prettier-ignore */}
+  <label class="btn btn-subtle" tabIndex={0} for="drawer-2">Left</label>
+  <Drawer id="drawer-2" class="w-96 p-4" direction="left">
+    <h2 class="text-2xl font-bold">Hello world</h2>
+    <p>Onimai is the best anime I've ever seen!!!</p>
+  </Drawer>
+</Preview>
 
 ## Usage
 
 ```jsx
-<Drawer id="unique-id" class="w-96 p-4">
-  <h2 class="text-2xl font-bold">Hello world</h2>
-  <p>Onimai is the best anime I've ever seen!!!</p>
-</Drawer>
+// id should be globally unique, anything :checked can trigger drawer to open
+<input type="checkbox" hidden id="drawer-x">
+<div class="drawer">
+  <label class="drawer-background" for="drawer-x" />
+  <div class="drawer-content p-4">
+    <h2 class="text-2xl font-bold">Hello world</h2>
+    <p>Onimai is the best anime I've ever seen!!!</p>
+  </div>
+</div>
 ```
-
-## Preview
-
-<label class="btn" tabIndex={0} for="drawer-1">
-  Click to open
-</label>
-
-<Drawer id="drawer-1" class="w-96 p-4">
-  <h2 class="text-2xl font-bold">Hello world</h2>
-  <p>Onimai is the best anime I've ever seen!!!</p>
-</Drawer>
