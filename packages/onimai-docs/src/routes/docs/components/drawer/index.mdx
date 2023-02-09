@@ -11,8 +11,8 @@ import { Preview } from "~/components/preview/preview";
 
 {/* prettier-ignore */}
 <Preview>
-  <label class="btn" tabIndex={0} for="drawer-x">
-  <input type="checkbox" hidden id="drawer-x">
+  <label class="btn" tabIndex={0} for="drawer-x">Example</label>
+  <input type="checkbox" hidden id="drawer-x" />
   <div class="drawer">
     <label class="drawer-background" for="drawer-x" />
     <div class="drawer-content w-96 p-4">
@@ -38,7 +38,7 @@ import { Preview } from "~/components/preview/preview";
 
 ```jsx
 // id should be globally unique, anything :checked can trigger drawer to open
-<input type="checkbox" hidden id="drawer-x">
+<input type="checkbox" hidden id="drawer-x" />
 <div class="drawer">
   <label class="drawer-background" for="drawer-x" />
   <div class="drawer-content p-4">
