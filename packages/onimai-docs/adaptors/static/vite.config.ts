@@ -12,7 +12,7 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdaptor({
-        origin: 'https://ling-yunchi.github.io',
+        origin: 'https://onimai.github.io',
       }),
     ],
   };
